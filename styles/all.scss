@@ -1,0 +1,29 @@
+@import url('https://fonts.cdnfonts.com/css/kranky?styles=20480');
+@import url('https://fonts.googleapis.com/css2?family=Magra&display=swap%27');
+@import url('https://fonts.cdnfonts.com/css/salsa');
+@import url('https://fonts.cdnfonts.com/css/th-sarabun-new-4');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+// Scroll Bar
+body::-webkit-scrollbar { // chrome et edge
+    width: 0.2em;
+    background-color: #F5F5F5; 
+}
+body::-webkit-scrollbar-thumb { // chrome et edge
+  background-color: #000000;
+}
+
+body::-moz-scrollbar { // mozilla
+    width: 0.2em;
+    background-color: #F5F5F5; 
+}
+body::-moz-scrollbar-thumb { // mozilla
+    background-color: #000000;
+}
