@@ -2,42 +2,69 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins","sans-serif";
     text-decoration: none;
     list-style: none;
 }
 
+/* Pour les navigateurs Firefox */
+body {
+  scrollbar-width: 2px;
+  scrollbar-color: #000000 #FFFFFF;
+}
+
+/* Pour les navigateurs WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+.background{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+}
 .background_menu{
     position: fixed;
     background-color: rgb(43, 44, 43);
     height: 100%;
-    width: 25%;
-    box-shadow: 0px 2px 32px 0px #08e63f;
+    width: 20%;
+    box-shadow: 0px 2px 32px 0px rgb(0, 255, 136);
 }
 
 .bloc_menu{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    height: 100%;
+    height: 50%;
 }
 
+.bloc_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+}
 
 .bloc_menu_nav{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
     width: 100%;
-    padding: 64px;
+    padding: 32px;
 }
 
 
 .bloc_menu_texte{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: rgba(255, 255, 255, 0.596);
@@ -46,32 +73,314 @@
     font-family: 'Salsa';
     flex: 1;
     height: 100%;
-    margin-bottom: 8px;
 }
 
-.bloc_menu_texte1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: rgb(255, 255, 255);
-    letter-spacing: 0.02em;
-    font-size: 20px;
-    font-family: 'Salsa';
-    flex: 1;
+.bloc_menu_nav li{
+    margin-bottom: 24px;
+    width: 100%;
     height: 100%;
-    border-bottom: solid 1px #fff;
-    margin-bottom: 8px;
-}
-
-.bloc_menu_texte1:hover{
-    border-bottom: solid 1px #08e63f;
-    color: #08e63f;
 }
 
 .bloc_menu_texte:hover{
-    border-bottom: solid 1px #08e63f;
-    color: #08e63f;
+    background: linear-gradient(90deg, rgb(0, 255, 136) 0%,rgb(24, 158, 191));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;;
+    letter-spacing: 0.04em;
+}
+
+.bloc_reseaux{
+    display: flex;
+    justify-content: center;
+    height: 10%;
+}
+
+.liste_reseaux {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 75%;
+}
+
+.liste_reseaux li{
+    width: 24px;
+    filter: grayscale(0.7);
+    -webkit-filter: grayscale(0.7);
+    -moz-filter: grayscale(0.7);
+    -o-filter: grayscale(0.7);
+    -ms-filter: grayscale(0.7);
+}
+
+.liste_reseaux li:hover{
+  filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -o-filter: grayscale(0);
+    -ms-filter: grayscale(0);
 }
 
 
+
+.background_contenu{
+    width: 80%;
+    margin-left: 20%;
+}
+
+.background_contenu .accueil{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.background_contenu .accueil{
+    color: white;
+}
+
+.background_contenu .accueil .template{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+}
+
+.background_contenu .accueil .texte{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.background_contenu .accueil .texte .titre{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex: 1;
+    font-size: 36px;
+    font-family: Salsa;
+    font-style: italic;
+}
+
+/* DEBUT ANIMATION DU NOM ET DU PRENOM*/
+
+.background_contenu .accueil .texte .nom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    font-size: 32px;
+    font-family: Salsa;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.animation {
+    display: flex;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .animation > div > div {
+    padding: 0.5rem;
+    margin-right: 50px;
+  }
+  
+  .animation div:first-child {
+    animation: text-animation 16s linear infinite;
+  }
+  
+  .first div {
+    margin-left: 50px;
+    width: 500px;
+  }
+  
+  .second div {
+    width: 500px;
+  }
+  
+  @keyframes text-animation {
+    0% {
+      margin-left: -25rem;
+    }
+    25% {
+      margin-left: -3rem;
+    }
+    40% {
+      margin-left: 4rem;
+    }
+    55% {
+      margin-left: 8rem;
+    }
+    60% {
+      margin-left: 10rem;
+    }
+    70% {
+        margin-left: 12rem;
+      }
+    80% {
+        margin-left: 20rem;
+      }
+    85% {
+      margin-left: 24rem;
+    }
+    90% {
+      margin-left: 28rem;
+    }
+    100% {
+      margin-left: 36rem;
+    }
+  }
+
+.background_contenu .accueil .texte .lien{
+    display: flex;
+    flex: 1;
+    font-size: 24px;
+    font-family: Salsa;
+    margin-left: 25%;
+    margin-right: 20%;
+}
+
+.background_contenu .accueil .texte .lien .cv , .background_contenu .accueil .texte .lien .contact{
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+
+}
+
+.background_contenu .accueil .texte .cv .bouton1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1B1D20;
+    width: 75%;
+    height: 50px;
+    padding: 16px;
+    border-radius: 32px;
+    border: 2px solid #111212;
+    color: #ffffff;
+}
+
+.background_contenu .accueil .texte .contact .bouton2{
+    background: linear-gradient(90deg, hsla(152, 100%, 50%, 1) 0%, hsla(192, 78%, 42%, 1) 100%);
+    width: 100%;
+    height: 50px;
+    padding: 16px;
+    border-radius: 32px;
+    border: 2px solid #111212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+.background_contenu .accueil .texte .cv .bouton1:hover{
+  background: linear-gradient(90deg, rgba(0, 255, 136, 0.705) 0%,rgba(24, 158, 191, 0.699)) 100%;
+  font-weight: 700;
+  letter-spacing: 0.006em;
+}
+.background_contenu .accueil .texte .contact .bouton2:hover{
+  background: linear-gradient(90deg, rgba(0, 255, 136, 0.705) 0%,rgba(24, 158, 191, 0.699)) 100%;
+  font-weight: 700;
+  letter-spacing: 0.006em;
+}
+
+/* FIN DE L'ACCUEIL*/
+
+/* DEBUT DE LA PRESENTATION (ABOUT ME)*/
+
+.presentation{
+  background-color: #212529;
+}
+
+.presentation .header , .competences .header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh;
+}
+
+.presentation .header .titre_back, .competences .header .titre_back{
+  background: linear-gradient(90deg, rgb(0, 255, 136) 0%,rgb(24, 158, 191));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 64px;
+  opacity: 0.7;
+  font-family: salsa;
+  transform: scale(0.7);
+}
+
+.presentation .contenu{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 2rem;
+}
+
+.presentation .contenu .texte{
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  padding: 30px;
+}
+.presentation .contenu .texte .titre{
+  border-left: solid 4px rgb(23, 156, 189);
+  padding: 2px 0px 0px 8px;
+  color: #fff;
+  font-size: 30px;
+}
+
+.presentation .contenu .texte .paragraphe{
+  padding-top: 16px;
+  padding-left: 16px;
+  font-size: 24px;
+  color: #919391;
+}
+
+.presentation .contenu .image{
+  display: flex;
+  flex: 1;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+b{
+  font-size: 26px;
+  color: #acacac;
+}
+
+.competences{
+  background-color: #343A40;
+}
+
+.competences .contenu .language{
+  padding: 30px;
+}
+
+.competences .contenu .language .titre{
+  display: flex;
+  align-items: center;
+}
+
+
+.competences .contenu .language .titre .texte{
+  border-left: solid 4px rgb(23, 156, 189);
+  padding: 2px 0px 0px 8px;
+  color: #fff;
+  font-size: 30px;
+}
+
+.competences .contenu .language .tableau{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 64px;
+}
+
+.competences .contenu .language .tableau .icone{
+  flex: 1;
+}

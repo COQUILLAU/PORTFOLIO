@@ -1,22 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="FR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/index.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="images/logo_title.png">
+    <title>COQUILLAU Elowan</title>
 </head>
-<body>
-    <div class="background_menu">
-        <nav class="bloc_menu">
-            <ul class="bloc_menu_nav">
-                <li><a class="bloc_menu_texte1" href="/">ACCUEIL</a></li>
-                <li><a class="bloc_menu_texte" href="/">MES PROJETS</a></li>
-                <li><a class="bloc_menu_texte" href="/">STAGES</a></li>
-                <li><a class="bloc_menu_texte" href="/">MON PROFIL</a></li>
-            </ul>
-        </nav>
-      </div>
-</body>
+
+    <body>
+
+        <div class="background" onscroll="myFunction()">
+            <div class="background_menu">
+                <div class="bloc_logo">
+                    <img src="images/logo.png" style="width: 100%;">
+                </div>
+                <nav class="bloc_menu">
+                    <ul class="bloc_menu_nav">
+                        <li><a href="#" class="bloc_menu_texte" style="  background: linear-gradient(90deg, rgb(0, 255, 136) 0%,rgb(24, 158, 191));-webkit-background-clip: text;-webkit-text-fill-color: transparent;" >ACCUEIL</a></li>
+                        <li><a href="#" id="presentation-link" class="bloc_menu_texte" href="/">PRESENTATION</a></li>
+                        <li><a href="#" class="bloc_menu_texte">MES PROJETS</a></li>
+                        <li><a href="#" class="bloc_menu_texte">STAGES</a></li>
+                        <li><a href="#" class="bloc_menu_texte">MON PROFIL</a></li>
+                    </ul>
+                </nav>
+
+                <div class="bloc_reseaux">
+                    <ul class="liste_reseaux">
+                        <li><a href="#"><img src="images/github.png"></a></li>
+                        <li><a href="#"><img src="images/linkedin-in.png"></a></li>
+                        <li><a href="#"><img src="images/mail.png"></a></li>
+                        <li><a href="#"><img src="images/phone.png"></a></li>
+                    </ul>
+                </div>
+                
+
+            </div>
+            <div class="background_contenu">
+
+                <div class="accueil">
+
+                    <div class="template">
+                        <img src="images/template portfolio.jpeg" style="width: 100%; height: 100%;">
+                    </div>
+
+                    <div class="texte">
+                        <div class="titre">
+                            <span>Bienvenue dans mon </span><span style="margin-left: 8px;color:#fb0bec;"> PORTFOLIO</span>
+                        </div>
+
+                        <div class="nom">
+                            <section class="animation">
+                                <div class="first"><div>COQUILLAU ELOWAN</div></div>
+                                <div class="second"><div>Futur Web Developper</div></div>
+                            </section>                           
+                        </div>
+
+                        <div class="lien">
+                            <div class="cv">
+                                <a href="html/cv.html" class="bouton1">Mon cv</a>
+                            </div>
+                            <div class="contact">
+                                <a href="#" class="bouton2">Me contacter</a>
+                            </div>
+                        </div>
+                    </div>
+                        
+                </div>
+                <div class ="presentation">
+                    <div class="header">
+                        <h2 class="titre_back" id="presentation">PRESENTATION</h2>
+                    </div>
+                    <div class="contenu">
+                        <div class="texte">
+                            <h2 class="titre">Un peu plus sur moi</h2>
+                            <p class="paragraphe">
+                                Actuellement Etudiant en BTS SIO j'ai pour objectif <b>d'approfondir mes connaissances</b> en matière de conception d'expérience utilisateur et de design web. <br><br>
+
+                                En tant qu'étudiant en <b>BTS SIO (Services Informatiques aux Organisations) en spécialité SLAM (Solutions Logicielles et Applications Métiers)</b> j'ai su acquérir des connaissances dans le développement web. <br><br>
+                                
+                                Ce portfolio développé par moi-même, a été mis en place afin d'y exposer mes qualités, mes compétences ainsi que les différents projets sur lesquels j'ai pu travailler.</p>
+                        </div>
+                        <div class="image">
+                            <img src="images/profil.webp" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="transition" style="display: flex;">
+                    <img src="images/transition.png" style="width: 100%;">
+                </div>
+
+                <div class="competences">
+                    <div class="header">
+                        <h2 class="titre_back" id="competence">COMPETENCES</h2>
+                    </div>
+                    <div class="contenu">
+                        <div class="language">
+                            <div class="titre"><h2 class="texte">LANGUAGE QUE JE MAITRISE</h2></div>
+                            <ul class="tableau">
+                                <li class="icone"><img src="images/php.png" style="width: auto;"></li>
+                                <li class="icone"><img src="images/css.png" style="width: auto;"></li>
+                                <li class="icone"><img src="images/html.png" style="width: auto;"></li>
+                                <li class="icone"><img src="images/figma.png" style="width: auto;"></li>
+                                <li class="icone"><img src="images//wordpress.png" style="width: auto;"></li>
+                                <li class="icone"><img src="images/mysql.png" style="width: auto;"></li>
+                                <li class="icone"><img src="images/photoshop.png" style="width: auto;"></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+
+            var presentation = document.getElementById("presentation");
+            var zoomLevel = 1;
+            var targetZoomLevel = 1;
+
+            var presentationLink = document.getElementById("presentation-link");
+
+            presentationLink.addEventListener("click", function(event) {
+            event.preventDefault();
+            window.scrollTo(0, 640);
+            });
+
+            function animateZoom() {
+            zoomLevel += (targetZoomLevel - zoomLevel) * 0.1;
+            presentation.style.transform = "scale(" + zoomLevel + ")";
+            requestAnimationFrame(animateZoom);
+            }
+
+            window.addEventListener("scroll", function() {
+            var scrollPosition = window.scrollY;
+
+            if (scrollPosition > 150) {
+                targetZoomLevel = 1.4;
+            } else {
+                targetZoomLevel = 1;
+            }
+            console.log(scrollPosition); // afficher la position de défilement dans la console
+
+            });
+
+            animateZoom();
+        </script>
+
+    </body>
+    
 </html>
