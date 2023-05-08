@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="FR">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -116,39 +116,7 @@
 
         </div>
 
-        <script>
 
-            var presentation = document.getElementById("presentation");
-            var zoomLevel = 1;
-            var targetZoomLevel = 1;
-
-            var presentationLink = document.getElementById("presentation-link");
-
-            presentationLink.addEventListener("click", function(event) {
-            event.preventDefault();
-            window.scrollTo(0, 640);
-            });
-
-            function animateZoom() {
-            zoomLevel += (targetZoomLevel - zoomLevel) * 0.1;
-            presentation.style.transform = "scale(" + zoomLevel + ")";
-            requestAnimationFrame(animateZoom);
-            }
-
-            window.addEventListener("scroll", function() {
-            var scrollPosition = window.scrollY;
-
-            if (scrollPosition > 150) {
-                targetZoomLevel = 1.4;
-            } else {
-                targetZoomLevel = 1;
-            }
-            console.log(scrollPosition); // afficher la position de défilement dans la console
-
-            });
-
-            animateZoom();
-        </script>
 
     </body>
     
