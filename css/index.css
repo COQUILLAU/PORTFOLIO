@@ -299,14 +299,14 @@ body {
 
 /*-----------------DEBUT DU CSS POUR LES HEADER ET TITRE BACK----------------------*/
 
-.presentation .header , .competences .header , .projet .header, .stage .header{
+.presentation .header , .competences .header ,.formation .header, .projet .header, .stage .header{
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 5vh;
 }
 
-.presentation .header .titre_back, .competences .header .titre_back , .projet .header .titre_back, .stage .header .titre_back{
+.presentation .header .titre_back, .competences .header .titre_back ,.formation .header .titre_back, .projet .header .titre_back, .stage .header .titre_back{
   background: linear-gradient(90deg, rgb(0, 255, 136) 0%,rgb(24, 158, 191));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -413,7 +413,7 @@ b{
   margin-bottom: 12%;
 }
 
-.competences .contenu .language .tableau .icone .sous .bouton_savoir_plus{
+.bouton_savoir_plus{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -423,7 +423,7 @@ b{
   border: 1px solid #000000;
 }
 
-.competences .contenu .language .tableau .icone .sous .bouton_savoir_plus .texte{
+.bouton_savoir_plus .texte{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -435,21 +435,20 @@ b{
   color: black;
 }
 
-.competences .contenu .language .tableau .icone .sous .bouton_savoir_plus .texte img{
+.bouton_savoir_plus .texte img{
   margin-left: 5%;
   width: 24px;
   border-radius: 32px;
   background-color: white;
 }
 
-.competences .contenu .language .tableau .icone .sous .bouton_savoir_plus .texte:hover{
-  background: linear-gradient(90deg, hsla(242, 61%, 49%, 1) 0%, hsla(262, 96%, 39%, 1) 9%, hsla(290, 70%, 51%, 1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.bouton_savoir_plus .texte:hover{
+  background: linear-gradient(90deg, hsl(243.8, 37%, 24.9%) 0%, hsl(261.9, 66.5%, 31.6%) 9%, hsl(289.8, 68.1%, 40.6%) 100%);
+  color: #fff;
   font-weight: 500;
 }
 
-.competences .contenu .language .tableau .icone .sous .bouton_savoir_plus .texte img:hover{
+.bouton_savoir_plus .texte img:hover{
   background: linear-gradient(90deg, hsla(242, 61%, 49%, 1) 0%, hsla(262, 96%, 39%, 1) 9%, hsla(290, 70%, 51%, 1) 100%);
   transform: rotate(90deg);
 }
@@ -479,6 +478,118 @@ b{
     width: 70%;
     opacity: 1;
   }
+}
+
+/*----------FORMATION---------------*/
+
+.formation{
+  display: flex;
+  flex-direction: column;
+  background-color: #212529;
+}
+
+.formation .schema {
+  width: 100%;
+  height: auto;
+  font-family: poppins;
+  padding: 50px 0;
+  display: grid;
+  place-items: center;
+}
+
+.formation .schema .tableau {
+  width: 70%;
+  height: auto;
+  position: relative;
+}
+
+
+.formation .schema .tableau ul li {
+  width: 50%;
+  height: auto;
+  padding: 15px 20px;
+  background-color: #111418;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 25px rgba(51, 51, 51, 0.192);
+  position: relative;
+  z-index: 10;
+}
+
+.formation .schema .tableau ul li h3 {
+  color: #fff;
+  margin-bottom: 0.5em;
+}
+
+.formation .schema .tableau ul li p {
+  font-size: 15px;
+  color: #ffffff80;
+  margin: 7px 0;
+  line-height: 23px;
+}
+
+
+.formation .schema .tableau ul li .date {
+  position: absolute;
+  top: -45px;
+  width: 135px;
+  height: 35px;
+  border-radius: 20px;
+  color: #fff;
+  background: linear-gradient(90deg, hsla(242, 61%, 49%, 1) 0%, hsla(262, 96%, 39%, 1) 9%, hsla(290, 70%, 51%, 1) 100%);
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  right: 0;
+}
+
+.formation .schema .tableau ul::after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(90deg, hsla(242, 61%, 49%, 1) 0%, hsla(262, 96%, 39%, 1) 9%, hsla(290, 70%, 51%, 1) 100%);
+  z-index: 1;
+}
+
+.formation .schema .tableau ul li .cercle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(220, 0, 240, 0.401);
+  position: absolute;
+  top: 0;
+}
+
+.formation .schema .tableau ul li:nth-child(odd) .cercle {
+  right: -30px;
+  transform: translate(50%, -50%);
+}
+
+.formation .schema .tableau ul li:nth-child(even) .cercle {
+  left: -30px;
+  transform: translate(-50%, -50%);
+}
+
+.formation .schema .tableau ul li .cercle::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(106, 6, 236);
+  border-radius: 50%;
+  transform: translate(50%, 50%);
+}
+
+.formation .schema .tableau ul li:nth-child(odd) {
+  float: left;
+  clear: right;
+  transform: translateX(-30px);
+}
+.formation .schema .tableau ul li:nth-child(even) {
+  float: right;
+  clear: left;
+  transform: translateX(30px);
 }
 
 /*----------PROJETS ---------------*/
@@ -555,3 +666,35 @@ b{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/*-----------------CREATION DU POP UP-------------------*/
+
+.popup{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(94, 94, 94);
+  top: 0;
+  z-index: 10;
+}
+
+.popup .savoir{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-left: 25%;
+}
+.popup .savoir .header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+}
+
+.popup .savoir .contenu{
+  display: flex;
+  background-color: red;
+}
+
+

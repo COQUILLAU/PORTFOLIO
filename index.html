@@ -22,6 +22,7 @@
                         <li><a href="#" class="bloc_menu_texte" style="  background: linear-gradient(90deg, rgb(0, 255, 136) 0%,rgb(24, 158, 191));-webkit-background-clip: text;-webkit-text-fill-color: transparent;" >ACCUEIL</a></li>
                         <li><a href="#" id="presentation-link" class="bloc_menu_texte">MON PROFIL</a></li>
                         <li><a href="#" id="competences-link" class="bloc_menu_texte">COMPETENCES</a></li>
+                        <li><a href="#" id="formation-link" class="bloc_menu_texte">FORMATIONS</a></li>
                         <li><a href="#" id="projet-link" class="bloc_menu_texte">MES PROJETS</a></li>
                         <li><a href="#" class="bloc_menu_texte">STAGES</a></li>
                     </ul>
@@ -217,8 +218,65 @@
                     </div>
                 </div>
 
+
                 <div class="transition" style="display: flex;">
                     <img src="images/transition/transition2.png" style="width: 100%;">
+                </div>
+
+                <div class ="formation">
+
+                    <div class="header">
+                        <h2 class="titre_back" id="projet">MA FORMATION</h2>
+                    </div>
+
+                    <div class="contenu">
+                        <div class="schema">
+                            <div class="tableau">
+                                <ul >
+                                    <li>
+                                        <h3>BAC TECHNOLOGIQUE Section européenne</h3>
+                                        <p>
+                                            Au cours de mes 3 année d'expériences professionnelle 
+                                            dans l'agence web SVI WEB, j'ai acquis des compétences 
+                                            solides dans la création de sites web vitrine et responsive...
+                                        </p>
+                                        <div class="bouton_savoir_plus">
+                                            <a href class="texte">Savoir Plus </a>
+                                        </div>
+                                        <span class="date">2020 - 2023</span>
+                                        <span class="cercle"></span>
+                                    </li>
+                                    <li>
+                                        <h3>BTS SIO Spécialité SLAM</h3>
+                                        <p>
+                                            Au cours de mes 3 année d'expériences professionnelle 
+                                            dans l'agence web SVI WEB, j'ai acquis des compétences 
+                                            solides dans la création de sites web vitrine et responsive...
+                                        </p>
+                                        <div class="bouton_savoir_plus">
+                                            <a href class="texte">Savoir Plus </a>
+                                        </div>
+                                        <span class="date">2022 - 2024</span>
+                                        <span class="cercle"></span>
+                                    </li>
+                                    <li>
+                                        <h3>Mon Ambition</h3>
+                                        <p>
+                                            Au cours de mes 3 année d'expériences professionnelle 
+                                            dans l'agence web SVI WEB, j'ai acquis des compétences 
+                                            solides dans la création de sites web vitrine et responsive...
+                                        </p>
+                                        <div class="bouton_savoir_plus">
+                                            <a href class="texte">Savoir Plus</a>
+                                        </div>
+                                        <span class="date">Après BTS SIO</span>
+                                        <span class="cercle"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
                 <div class ="projet">
@@ -262,19 +320,24 @@
         <script>
             var presentation = document.getElementById("presentation");
             var competences = document.getElementById("competences");
+            var formation = document.getElementById("formation");
             var projet = document.getElementById("projet");
-          
+
             var zoomLevel = 1;
             var targetZoomLevel = 1;
-          
+
             var zoomLevel2 = 1;
             var targetZoomLevel2 = 1;
-          
+
             var zoomLevel3 = 1;
             var targetZoomLevel3 = 1;
-          
+
+            var zoomLevel4 = 1;
+            var targetZoomLevel4 = 1;
+
             var presentationLink = document.getElementById("presentation-link");
             var competencesLink = document.getElementById("competences-link");
+            var formationLink = document.getElementById("formation-link");
             var projetLink = document.getElementById("projet-link");
           
             presentationLink.addEventListener("click", function(event) {
@@ -286,10 +349,15 @@
                 event.preventDefault();
                 window.scrollTo(0, 1150);
             });
+
+            formationLink.addEventListener("click", function(event) {
+                event.preventDefault();
+                window.scrollTo(0, 2300);
+            });
           
             projetLink.addEventListener("click", function(event) {
                 event.preventDefault();
-                window.scrollTo(0, 2300);
+                window.scrollTo(0, 2600);
             });
           
             function animateZoom() {
@@ -306,8 +374,14 @@
           
             function animateZoom3() {
                 zoomLevel3 += (targetZoomLevel3 - zoomLevel3) * 0.1;
-                projet.style.transform = "scale(" + zoomLevel3 + ")";
+                formation.style.transform = "scale(" + zoomLevel3 + ")";
                 requestAnimationFrame(animateZoom3);
+            }
+
+            function animateZoom4() {
+                zoomLevel4 += (targetZoomLevel4 - zoomLevel4) * 0.1;
+                projet.style.transform = "scale(" + zoomLevel4 + ")";
+                requestAnimationFrame(animateZoom4);
             }
           
             window.addEventListener("scroll", function() {
@@ -338,9 +412,19 @@
                 }
             });
           
+            window.addEventListener("scroll", function() {
+                var scrollPosition = window.scrollY;
+                if (scrollPosition > 2500) {
+                    targetZoomLevel4 = 1.4;
+                } else {
+                    targetZoomLevel4 = 1;
+                }
+            });
+
             animateZoom();
             animateZoom2();
             animateZoom3();
+            animateZoom4();
           </script>
 
     </body>
