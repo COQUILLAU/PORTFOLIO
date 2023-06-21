@@ -1292,3 +1292,20 @@ footer .referentiel:hover {
   overflow: visible;
 }
 
+/*.zoom-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.zoom-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+  transform-origin: top left;
+}
+
+.zoom-container:hover img {
+  transform: scale(2);
+}*/

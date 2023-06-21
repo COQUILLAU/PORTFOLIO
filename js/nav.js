@@ -1,4 +1,4 @@
-var presentationLink = document.getElementById("presentation-link");
+/*var presentationLink = document.getElementById("presentation-link");
 var competencesLink = document.getElementById("competences-link");
 var formationLink = document.getElementById("formation-link");
 var projetLink = document.getElementById("projet-link");
