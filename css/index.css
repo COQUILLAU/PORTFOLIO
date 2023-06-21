@@ -1154,6 +1154,33 @@ footer .referentiel:hover {
   transition: opacity 0.4s 0.2s ease-out,
   transform 0.4s 0.2s ease-out;
 }
+
+.modal-container_scrum {
+  /* display: none; */
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: visibility 0.4s;
+}
+.modal-container_scrum.active {
+  /* display: block; */
+  visibility: visible;
+  z-index: 1000;
+}
+
+.modal-container_scrum.active .overlay {
+  opacity: 1;
+  transition: opacity 0.4s ease-out;
+}
+
+.modal-container_scrum.active .modal {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.4s 0.2s ease-out,
+  transform 0.4s 0.2s ease-out;
+}
 .overlay {
   opacity: 0;
   position: absolute;
@@ -1184,11 +1211,10 @@ footer .referentiel:hover {
 }
 
 .modal-btn {
-  padding: 10px 14px;
-  font-size: 18px;
   display: block;
   min-width: 150px;
   cursor: pointer;
+  flex: 1;
 }
 
 .close-modal {
