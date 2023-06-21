@@ -5,20 +5,20 @@ var projetLink = document.getElementById("projet-link");
 
 presentationLink.addEventListener("click", function(event) {
     event.preventDefault();
-    window.scrollTo(0, 640);
+    window.scrollTo(0, 580);
 });
 
 competencesLink.addEventListener("click", function(event) {
     event.preventDefault();
-    window.scrollTo(0, 1150);
+    window.scrollTo(0, 1300);
 });
 
 formationLink.addEventListener("click", function(event) {
     event.preventDefault();
-    window.scrollTo(0, 2200);
+    window.scrollTo(0, 3100);
 });
 
 projetLink.addEventListener("click", function(event) {
     event.preventDefault();
-    window.scrollTo(0, 3300);
+    window.scrollTo(0, 4400);
 });

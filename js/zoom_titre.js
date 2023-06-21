@@ -60,7 +60,7 @@ window.addEventListener("scroll", function() {
 
 window.addEventListener("scroll", function() {
     var scrollPosition = window.scrollY;
-    if (scrollPosition > 2100) {
+    if (scrollPosition > 2900) {
         targetZoomLevel3 = 1.4;
     } else {
         targetZoomLevel3 = 1;
@@ -69,7 +69,7 @@ window.addEventListener("scroll", function() {
 
 window.addEventListener("scroll", function() {
     var scrollPosition = window.scrollY;
-    if (scrollPosition > 3300) {
+    if (scrollPosition > 4150) {
         targetZoomLevel4 = 1.4;
     } else {
         targetZoomLevel4 = 1;

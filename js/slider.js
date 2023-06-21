@@ -4,6 +4,14 @@ const marqueeContent = document.querySelector("ul.marquee-content");
 
 root.style.setProperty("--marquee-elements", marqueeContent.children.length);
 
-for(let i=0; i<marqueeElementsDisplayed; i++) {
-marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+for (let i = 0; i < marqueeElementsDisplayed; i++) {
+  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
 }
+
+marqueeContent.addEventListener("mouseenter", function() {
+  marqueeContent.style.animationPlayState = "paused";
+});
+
+marqueeContent.addEventListener("mouseleave", function() {
+  marqueeContent.style.animationPlayState = "running";
+});
