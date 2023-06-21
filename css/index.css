@@ -64,7 +64,6 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 32px;
 }
 
 
@@ -109,11 +108,15 @@ body {
 
 
 .liste_reseaux li:hover{
-  filter: brightness(1.15);
-    -webkit-filter: brightness(1.15);
-    -moz-filter: brightness(1.15);
-    -o-filter: brightness(1.15);
-    -ms-filter: brightness(1.15);
+  filter: drop-shadow(2px 4px 3px black);
+}
+
+.liste_reseaux li a{
+  filter: brightness(0.5);
+}
+
+.liste_reseaux li a:hover{
+  filter: brightness(1);
 }
 
 /*-----------------------FIN DU MENU--------------------*/
@@ -505,7 +508,7 @@ b{
   font-family: 'Salsa';
   padding: 2px 16px 0px 8px;
   color: #fff;
-  font-size: 26px;
+  font-size: 24px;
 }
 /********* ANIMATION DU TABLEAU QUI DEFILE***********/
 :root {
@@ -1215,6 +1218,7 @@ footer .referentiel:hover {
   min-width: 150px;
   cursor: pointer;
   flex: 1;
+  height: fit-content;
 }
 
 .close-modal {
